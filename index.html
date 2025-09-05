@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIH Attendance System Flowchart</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="flowchart-container">
+        <div class="title"> GEOLOCATION ATTENDANCE SYSTEM</div>
+        <div class="subtitle">Teacher-Initiated Smart Attendance Tracking</div>
+
+        <!-- Row 1: Teacher Initiation -->
+        <div class="row">
+            <div class="flow-node teacher">
+                <div class="icon">👨‍🏫</div>
+                <div>TEACHER<br/>STARTS</div>
+            </div>
+            <div class="arrow"></div>
+            <div class="flow-node teacher">
+                <div class="icon">📱</div>
+                <div>CREATE<br/>SESSION</div>
+            </div>
+            <div class="arrow"></div>
+            <div class="flow-node student">
+                <div class="icon">👥</div>
+                <div>STUDENTS<br/>ENTER</div>
+            </div>
+        </div>
+
+        <!-- Row 2: Student Notification -->
+        <div class="row">
+            <div class="arrow-down"></div>
+        </div>
+
+        <div class="row">
+            <div class="flow-node student">
+                <div class="icon">📲</div>
+                <div>AUTO<br/>NOTIFY</div>
+            </div>
+        </div>
+
+        <!-- Row 3: Triple Verification -->
+        <div class="row">
+            <div class="arrow-down"></div>
+        </div>
+
+        <div class="verification-section">
+            <div class="decision-label">🔒 TRIPLE VERIFICATION SYSTEM 🔒</div>
+            <div class="verification-row">
+                <div class="flow-node verify">
+                    <div class="icon">🤖</div>
+                    <div>FACE<br/>SCAN</div>
+                </div>
+                <div class="flow-node verify">
+                    <div class="icon">📡</div>
+                    <div>BEACON<br/>DETECT</div>
+                </div>
+                <div class="flow-node verify">
+                    <div class="icon">🌐</div>
+                    <div>GPS<br/>20M</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 4: Verification Results -->
+        <div class="row">
+            <div class="arrow-down"></div>
+        </div>
+
+        <div class="row">
+            <div class="flow-node success">
+                <div class="icon">✅</div>
+                <div>VERIFIED<br/>SUCCESS</div>
+            </div>
+            <div style="margin: 0 20px;">
+                <div class="decision-label">OR</div>
+            </div>
+            <div class="flow-node fail">
+                <div class="icon">❌</div>
+                <div>FAILED<br/>RETRY</div>
+            </div>
+        </div>
+
+        <!-- Row 5: Processing Paths -->
+        <div class="row">
+            <div class="arrow-down"></div>
+            <div style="width: 100px;"></div>
+            <div class="arrow-down"></div>
+        </div>
+
+        <div class="row">
+            <div class="flow-node success">
+                <div class="icon">💾</div>
+                <div>SAVE<br/>RECORD</div>
+            </div>
+            <div class="arrow"></div>
+            <div class="flow-node fail">
+                <div class="icon">📝</div>
+                <div>MANUAL<br/>REQUEST</div>
+            </div>
+            <div class="arrow"></div>
+            <div class="flow-node teacher">
+                <div class="icon">👨‍🏫</div>
+                <div>TEACHER<br/>APPROVE?</div>
+            </div>
+        </div>
+
+        <!-- Row 6: Final Processing -->
+        <div class="row">
+            <div class="arrow-down"></div>
+        </div>
+
+        <div class="row">
+            <div class="flow-node success">
+                <div class="icon">🏆</div>
+                <div>GROUP<br/>POINTS</div>
+            </div>
+            <div class="arrow"></div>
+            <div class="flow-node system">
+                <div class="icon">📊</div>
+                <div>UPDATE<br/>STATS</div>
+            </div>
+            <div class="arrow"></div>
+            <div class="flow-node system">
+                <div class="icon">⏰</div>
+                <div>CLASS<br/>ONGOING</div>
+            </div>
+        </div>
+
+        <!-- Row 7: Completion -->
+        <div class="row">
+            <div class="arrow-down"></div>
+        </div>
+
+        <div class="row">
+            <div class="flow-node system">
+                <div class="icon">🔚</div>
+                <div>AUTO<br/>CHECKOUT</div>
+            </div>
+            <div class="arrow"></div>
+            <div class="flow-node success">
+                <div class="icon">📈</div>
+                <div>FINAL<br/>ANALYTICS</div>
+            </div>
+        </div>
+
+        <div class="team-info">
+            🏆 Team GeoPulse - Smart India Hackathon 225 🏆<br/>
+            "UPASTHIT HAI!" - Geolocation and Bluetooth Based Attendance Tracking System
+        </div>
+    </div>
+</body>
+</html>

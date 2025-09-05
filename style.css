@@ -1,0 +1,172 @@
+ body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .flowchart-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #718096;
+            margin-bottom: 30px;
+        }
+
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .flow-node {
+            width: 120px;
+            height: 100px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+            border: 4px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .flow-node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .icon {
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        .arrow {
+            width: 40px;
+            height: 4px;
+            background: #4a5568;
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -6px;
+            width: 0;
+            height: 0;
+            border-left: 12px solid #4a5568;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+        }
+
+        .arrow-down {
+            width: 4px;
+            height: 40px;
+            background: #4a5568;
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .arrow-down::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: -6px;
+            width: 0;
+            height: 0;
+            border-top: 12px solid #4a5568;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+        }
+
+        /* Node Colors */
+        .teacher { background: linear-gradient(135deg, #FFD700, #FFA500); border-color: #FF6B35; color: #000; }
+        .student { background: linear-gradient(135deg, #87CEEB, #4169E1); border-color: #1E90FF; color: #000; }
+        .verify { background: linear-gradient(135deg, #98FB98, #32CD32); border-color: #228B22; color: #000; }
+        .success { background: linear-gradient(135deg, #90EE90, #00FF7F); border-color: #00C851; color: #000; }
+        .fail { background: linear-gradient(135deg, #FFB6C1, #FF69B4); border-color: #DC143C; color: #000; }
+        .system { background: linear-gradient(135deg, #DDA0DD, #9370DB); border-color: #8A2BE2; color: #000; }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .verification-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .verification-row {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .decision-label {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.9);
+            border: 2px solid #4a5568;
+        }
+
+        .team-info {
+            text-align: center;
+            margin-top: 30px;
+            color: #4a5568;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .flowchart-container {
+                padding: 20px;
+            }
+            
+            .flow-node {
+                width: 100px;
+                height: 80px;
+                font-size: 10px;
+            }
+            
+            .icon {
+                font-size: 28px;
+            }
+        }
